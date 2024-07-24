@@ -1,0 +1,16 @@
+<!-- templates/products/category_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Categories</title>
+    <!-- Include any CSS or JS frameworks here -->
+</head>
+<body>
+    <h1>Product Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li><a href="{% url 'product_list_by_category' category.slug %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

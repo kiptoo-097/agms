@@ -1,0 +1,15 @@
+<!-- templates/products/product_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.title }}</title>
+    <!-- Include any CSS or JS frameworks here -->
+</head>
+<body>
+    <h1>{{ product.title }}</h1>
+    <img src="{{ product.image.url }}" alt="{{ product.title }}">
+    <p>{{ product.description }}</p>
+    <p>Price: ${{ product.price }}</p>
+    <a href="{% url 'product_list_by_category' category.slug %}">Back to Product List</a>
+</body>
+</html>
